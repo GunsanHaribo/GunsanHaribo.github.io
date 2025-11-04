@@ -103,11 +103,11 @@
     </div>
     <div class='text-center md:text-right'>
       <h1 class='text-4xl font-bold mb-2'>황지환</h1>
-      <p class='text-xl mb-4'>배우려고 하는 개발자</p>
+      <p class='text-xl mb-4'>더 배우려고 하는 개발자</p>
       <p class='sunny:text-gray-600 text-gray-400'>
         끝없이 배우려고 하는 신입 백엔드 개발자입니다.<br>
         문제 해결을 어떻게 하면 더 효율적으로 할 수 있을까 고민하고,<br>
-        팀과 같이 나아가기 위해서 고민 합니다.
+        팀과 함께 나아가기 위해서 고민 합니다.
       </p>
     </div>
   </section>
@@ -233,18 +233,97 @@
 
         </div>
         <div class='p-6'>
-          <h3
-            class='text-xl font-semibold mb-4 sunny:text-gray-800 text-gray-100'>
-            역할
+          <div
+            class='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm sunny:text-gray-600 text-gray-300 leading-relaxed'>
+            <div>
+              <h3 class='text-lg font-semibold mb-2 sunny:text-gray-800 text-gray-200'>프로젝트 주요
+                기능</h3>
+              <ul class='list-disc ml-4 space-y-1'>
+                <li>로그인</li>
+                <li>의상 등록</li>
+                <li>날씨기반 의상 추천</li>
+                <li>팔로우</li>
+                <li>피드 제공</li>
+                <li>실시간 DM(WebSocket)</li>
+                <li>실시간 알림</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class='text-lg font-semibold mb-2 sunny:text-gray-800 text-gray-200'>담당 역할</h3>
+              <ul class='list-disc ml-4 space-y-1'>
+                <li>팀 리더 (프로젝트 일정 관리)</li>
+                <li>CI/CD 구축 (GitHub Actions + AWS)</li>
+                <li>의상 등록 / 팔로우 / DM 기능 구현</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class='p-6' id='improvementsSection'>
+          <h3 class='text-xl font-semibold mb-4 sunny:text-gray-800 text-gray-100'>
+            개선사항
           </h3>
-          <p class='sunny:text-gray-600 text-gray-300 text-sm leading-relaxed'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore.
-          </p>
+
+          <div class='relative sunny:bg-gray-100 bg-gray-800 rounded-lg overflow-visible'>
+            <!-- Slides -->
+            <div class='px-2'>
+              <div class='improvement-slide'>
+                <h4 class='text-lg font-semibold mb-2 sunny:text-gray-800 text-gray-200'>코드개선 #1</h4>
+                <ul
+                  class='list-disc ml-5 sunny:text-gray-700 text-gray-300 text-sm leading-relaxed space-y-1'>
+                  <li>예: 피드 초기 로딩 시간이 길다 (초기 번들 크기 1.2MB).</li>
+                  <li>예: 이미지 최적화 미흡 (webp 미사용, 썸네일 X).</li>
+                  <li>예: API 응답 캐시 미적용으로 동일 요청 반복 발생.</li>
+                  <li>예: 배포마다 다운타임 발생 (무중단 배포 미도입).</li>
+                  <li>예: 로깅 표준화 미흡으로 장애 원인 파악 지연.</li>
+                  <li>예: 배포마다 다운타임 발생 (무중단 배포 미도입).</li>
+                  <li>예: 로깅 표준화 미흡으로 장애 원인 파악 지연.</li>
+                  <li>예: 배포마다 다운타임 발생 (무중단 배포 미도입).</li>
+                  <li>예: 로깅 표준화 미흡으로 장애 원인 파악 지연.</li>
+                </ul>
+              </div>
+
+              <div class='improvement-slide hidden'>
+                <h4 class='text-lg font-semibold mb-2 sunny:text-gray-800 text-gray-200'>문제점 #2</h4>
+                <ul
+                  class='list-disc ml-5 sunny:text-gray-700 text-gray-300 text-sm leading-relaxed space-y-1'>
+                  <li>예: DM 실시간 연결 안정성 이슈 (재연결 백오프 미구현).</li>
+                  <li>예: 배포마다 다운타임 발생 (무중단 배포 미도입).</li>
+                  <li>예: 로깅 표준화 미흡으로 장애 원인 파악 지연.</li>
+                  <li>예: 배포마다 다운타임 발생 (무중단 배포 미도입).</li>
+                  <li>예: 로깅 표준화 미흡으로 장애 원인 파악 지연.</li>
+                  <li>예: 배포마다 다운타임 발생 (무중단 배포 미도입).</li>
+                  <li>예: 로깅 표준화 미흡으로 장애 원인 파악 지연.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button
+              type='button'
+              class='absolute -left-5 top-1/2 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded hover:bg-black/600'
+              onclick='slideImprovements(-1)'
+              aria-label='이전 개선사항'
+            >◀
+            </button>
+
+            <button
+              type='button'
+              class='absolute -right-5 top-1/2 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded hover:bg-black/60'
+              onclick='slideImprovements(1)'
+              aria-label='다음 개선사항'
+            >▶
+            </button>
+
+            <!-- Dots -->
+            <div class='flex justify-center mt-3 space-x-2'>
+              <span
+                class='improvement-dot inline-block w-2 h-2 rounded-full sunny:bg-gray-400 bg-gray-600'></span>
+              <span
+                class='improvement-dot inline-block w-2 h-2 rounded-full sunny:bg-gray-400 bg-gray-600'></span>
+            </div>
+          </div>
         </div>
       </article>
     </div>
@@ -267,7 +346,7 @@
         </div>
         <div class='col-span-1 flex justify-start space-x-2'>
           <a href='study/testcode/insights.md'
-             class='text-sm bg-blue-600 text-white px-3 py-1 rounded-md'>스터디 내용</a>
+             class='text-sm bg-blue-600 text-white px-3 py-1 rounded-md'>스터디 요약</a>
         </div>
       </article>
     </div>
@@ -303,6 +382,46 @@
     index = (index + direction + images.length) % images.length;
     document.getElementById('projectSlider').src = images[index];
   }
+
+  // 개선사항 슬라이더
+  let improvementsIndex = 0;
+
+  function renderImprovements() {
+    const section = document.getElementById('improvementsSection');
+    if (!section) {
+      return;
+    }
+    const slides = section.querySelectorAll('.improvement-slide');
+    const dots = section.querySelectorAll('.improvement-dot');
+    slides.forEach((el, i) => {
+      if (i === improvementsIndex) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+    dots.forEach((dot, i) => {
+      if (i === improvementsIndex) {
+        dot.classList.add('sunny:bg-gray-800', 'bg-gray-200');
+      } else {
+        dot.classList.remove('sunny:bg-gray-800', 'bg-gray-200');
+      }
+    });
+  }
+
+  function slideImprovements(direction) {
+    const section = document.getElementById('improvementsSection');
+    if (!section) {
+      return;
+    }
+    const slides = section.querySelectorAll('.improvement-slide');
+    const total = slides.length;
+    improvementsIndex = (improvementsIndex + direction + total) % total;
+    renderImprovements();
+  }
+
+  // 초기 렌더
+  renderImprovements();
 
   function toggleDarkMode() {
     const darkModeToggleIcon = document
